@@ -16,8 +16,8 @@
   <node pkg="bluerov_ros_playground" type="SensorDataConverter.py" name="SensorConverter" output="screen">
 <rosparam command="load" file="$(find bluerov_ros_playground)/config/girona.yaml" />
 </node>
-  <node pkg="bluerov_ros_playground" type="nav_plotter.py" name="nav_plotter" output="screen"/>
-  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 5 $(find bluerov_ros_playground)/bags/br.bag --topics /teledyne_explorer/DVL /BlueRov2/imu/data /BlueRov2/Depth2 /orb_slam2_stereo/pose"/>
+  <!-- <node pkg="bluerov_ros_playground" type="nav_plotter.py" name="nav_plotter" output="screen"/> -->
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 1 $(find bluerov_ros_playground)/bags/br.bag --topics /teledyne_explorer/DVL /BlueRov2/imu/data /BlueRov2/Depth2 /orb_slam2_stereo/pose"/>
 <node type="rviz" name="rviz" pkg="rviz" args="-d $(find robot_localization)/rviz/blueRovBag.rviz" />
 <node pkg="rosbag" type="record" name="rosbag_record_diag" args="record -o $(find bluerov_ros_playground)/bags/calib.bag -a"/>
 </launch>
