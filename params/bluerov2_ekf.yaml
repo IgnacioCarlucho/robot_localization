@@ -135,7 +135,7 @@ odom1_relative: false
 odom1_pose_rejection_threshold: 5
 odom1_twist_rejection_threshold: 1
 #---------------------------------------------------------------
-imu0: /BlueRov2/imu/data/ENU
+imu0: /BlueRov2/imu/data
 imu0_config: [false, false, false,
               true,  true,  true,
               false, false, false,
